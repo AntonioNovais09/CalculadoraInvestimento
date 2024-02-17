@@ -42,12 +42,12 @@ function clearForm() {
   form["additional-contribution"].value = "";
   form["time-amount"].value = "";
   form["return-rate"].value = "";
-  form["tax-rate"].value = "";
+  form["tax-rate"].value = "  ";
 
-  const errorInputContainers = document.querySelectorAll(".error");
+  const errorInputContainers = document.querySelectorAll(" .error");
 
   for (const errorInputContainer of errorInputContainers) {
-    errorInputContainer.classList.remover("error");
+    errorInputContainer.classList.remove("error");
     errorInputContainer.parentElement.querySelector("p").remove();
   }
 }
