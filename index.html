@@ -70,7 +70,7 @@
               id="time-amount-period"
               class="w-1/3 rounded-r-lg border-l-2 border-emerald-600 text-center hover:bg-emerald-950 hover:text-slate-50"
             >
-              <option value="monthy">Mensal</option>
+              <option value="monthly">Mensal</option>
               <option value="yearly">Anual</option>
             </select>
           </div>
@@ -102,7 +102,7 @@
             >
               <!-- nao foi trocado  o id -->
 
-              <option value="monthy">Mensal</option>
+              <option value="monthly">Mensal</option>
               <option value="yearly">Anual</option>
             </select>
           </div>
@@ -137,11 +137,22 @@
         >
           Calcular
         </button>
-        <button id="clear-form" class="w-1/2 rounded-lg hover:bg-emerald-500">Limpar</button>
+        <button id="clear-form" class="w-1/2 rounded-lg hover:bg-emerald-500">
+          Limpar
+        </button>
       </div>
     </aside>
-    <main>
-      <p>Resultados</p>
+    <main class="h-full">
+      <section id="charts-container">
+        <div class="h-[36dvh]">
+          <p>Resultado Final</p>
+          <canvas id="final-money-distribution"></canvas>
+        </div>
+        <div class="h-[56dvh]">
+          <p>Progressão</p>
+          <canvas id="progression"></canvas>
+        </div>
+      </section>
     </main>
     <script type="module" src="./main.js"></script>
   </body>

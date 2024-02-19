@@ -43,7 +43,7 @@ export function generateReturnsArray(
       monthyContribution;
 
     const interestReturns =
-      returnsArray[timeReference - 1].totalAmount * finalReturnRate;
+      returnsArray[timeReference - 1].totalAmount * (finalReturnRate -1);
 
     const investedAmount = startingAmount + monthyContribution * timeReference;
     const totalInterestReturns = totalAmount - investedAmount;
