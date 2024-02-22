@@ -20,6 +20,9 @@ export const createTable = (columnsArray, dataArray, tableId) => {
   if (!tableElement || tableElement.nodeName !== "TABLE") {
     throw new Error("Id informado não corresponde a nenhum elemento table");
   }
+
+  tableElement.innerHTML = '';
+  
   createTableHeader(tableElement, columnsArray);
   createTableBody(tableElement, dataArray, columnsArray);
 };
